@@ -8,6 +8,15 @@ This repository contains an AWS Lambda function designed to summarize text files
 
 *Replace `path/to/architecture-image.png` with the actual path to your architecture image.*
 
+## Overview
+
+This solution leverages AWS Lambda to run a text summarization service triggered by an API Gateway endpoint. It uses the Mistral AI model via AWS Bedrock for processing and returning the summaries.
+
+### Key Components:
+- **AWS Lambda**: The compute service that processes the text and interacts with the Mistral AI model.
+- **API Gateway**: Exposes the API that allows users to upload text files.
+- **Mistral AI Model (via AWS Bedrock)**: Used for text summarization.
+  
 ## Lambda Function
 
 The Lambda function reads text data from an HTTP request, sends it to the Mistral AI model for summarization, and returns the summarized text.
@@ -79,6 +88,7 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps({'summarized_text': summarized_text})
     }
+
 ```
 
 # Usage
@@ -112,9 +122,10 @@ The summarized text will be saved to `summary.txt`. Check this file to see the r
 - Create a new function and paste the code into the Lambda editor.
 
 ### 2. Set Up API Gateway:
+- Navigate to API Gateway in the AWS console.
 - Create a new API in API Gateway.
 - Create a POST method and integrate it with your Lambda function.
 
 ### 3. Deploy API Gateway:
 - Deploy the API to a stage and use the provided URL to test your Lambda function.
-
+- Use the provided URL to test the Lambda function through the API Gateway.
