@@ -15,8 +15,24 @@ This solution leverages AWS Lambda to run a text summarization service triggered
 ### Key Components:
 - **AWS Lambda**: The compute service that processes the text and interacts with the Mistral AI model.
 - **API Gateway**: Exposes the API that allows users to upload text files.
-- **Mistral AI Model (via AWS Bedrock)**: Used for text summarization.
-  
+- **Amazon Bedrock**: A fully managed service from AWS that makes it easy to build and scale generative AI applications. It provides access to foundational models like Mistral for tasks such as text summarization.
+- **Mistral AI Model (via Amazon Bedrock)**: A language model accessed through Amazon Bedrock, used for summarizing large blocks of text in this solution.
+
+## Deployment
+
+### 1. Create the Lambda Function:
+- Go to the AWS Lambda console.
+- Create a new function and paste the code into the Lambda editor.
+
+### 2. Set Up API Gateway:
+- Navigate to API Gateway in the AWS console.
+- Create a new API in API Gateway.
+- Create a POST method and integrate it with your Lambda function.
+
+### 3. Deploy API Gateway:
+- Deploy the API to a stage and use the provided URL to test your Lambda function.
+- Use the provided URL to test the Lambda function through the API Gateway.
+
 ## Lambda Function
 
 The Lambda function reads text data from an HTTP request, sends it to the Mistral AI model for summarization, and returns the summarized text.
@@ -115,17 +131,3 @@ $response.summarized_text | Out-File -FilePath "summary.txt"
 ### 2. Verify the Response
 The summarized text will be saved to `summary.txt`. Check this file to see the result of the summarization.
 
-## Deployment
-
-### 1. Create the Lambda Function:
-- Go to the AWS Lambda console.
-- Create a new function and paste the code into the Lambda editor.
-
-### 2. Set Up API Gateway:
-- Navigate to API Gateway in the AWS console.
-- Create a new API in API Gateway.
-- Create a POST method and integrate it with your Lambda function.
-
-### 3. Deploy API Gateway:
-- Deploy the API to a stage and use the provided URL to test your Lambda function.
-- Use the provided URL to test the Lambda function through the API Gateway.
