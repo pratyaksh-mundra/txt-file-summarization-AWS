@@ -4,9 +4,8 @@ This repository contains an AWS Lambda function designed to summarize text files
 
 ## Architecture
 
-![Architecture Diagram](path/to/architecture-image.png)
+![Architecture Diagram](architecture.png)
 
-*Replace `path/to/architecture-image.png` with the actual path to your architecture image.*
 
 ## Overview
 
