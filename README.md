@@ -136,12 +136,12 @@ The summarized text will be saved to `summary.txt`. Check this file to see the r
 
 - this is the summary provided:
 
-The text discusses the use of existing Language Learning Models (LLMs) for application development and the situations where pretraining a model from scratch might be necessary. This is typically when the target domain uses unique vocabulary and language structures not commonly found in everyday language, such as in legal or medical fields.
-
-In the legal domain, terms like 'mens rea' and 'res judicata', and the use of common words in different contexts, like 'consideration', can pose challenges for existing LLMs. Similarly, medical language contains many uncommon words and uses language in idiosyncratic ways, which may not appear frequently in training datasets.
-
-Pretraining a model from scratch can result in better models for highly specialized domains like law, medicine, finance, or science. The text then discusses BloombergGPT, a large language model pretrained for the specific domain of finance. The researchers used a combination of finance data and general-purpose tax data for pretraining.
-
-The Bloomberg researchers followed the Chinchilla scaling laws for guidance but had to make tradeoffs due to real-world constraints. The model size of BloombergGPT roughly follows the Chinchilla approach, but the actual number of tokens used to pretrain the model is below the recommended Chinchilla value due to the limited availability of financial domain data.
-
-The text concludes with a recap of the week's topics, including common use cases for LLMs, the transformer architecture, model training during the pretraining phase, computational challenges, quantization, and scaling laws for LLMs.
+    The text discusses the use of existing Language Learning Models (LLMs) for application development and the situations where pretraining a model from scratch might be necessary. This is typically when the target domain uses unique vocabulary and language structures not commonly found in everyday language, such as in legal or medical fields.
+    
+    In the legal domain, terms like 'mens rea' and 'res judicata', and the use of common words in different contexts, like 'consideration', can pose challenges for existing LLMs. Similarly, medical language contains many uncommon words and uses language in idiosyncratic ways, which may not appear frequently in training datasets.
+    
+    Pretraining a model from scratch can result in better models for highly specialized domains like law, medicine, finance, or science. The text then discusses BloombergGPT, a large language model pretrained for the specific domain of finance. The researchers used a combination of finance data and general-purpose tax data for pretraining.
+    
+    The Bloomberg researchers followed the Chinchilla scaling laws for guidance but had to make tradeoffs due to real-world constraints. The model size of BloombergGPT roughly follows the Chinchilla approach, but the actual number of tokens used to pretrain the model is below the recommended Chinchilla value due to the limited availability of financial domain data.
+    
+    The text concludes with a recap of the week's topics, including common use cases for LLMs, the transformer architecture, model training during the pretraining phase, computational challenges, quantization, and scaling laws for LLMs.
